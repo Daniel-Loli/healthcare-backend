@@ -13,15 +13,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// health check
 app.get("/", (req, res) => {
   res.json({ message: "HealthCare Backend OK" });
 });
 
+// Rutas
 app.use("/auth", authRoutes);
 app.use("/conversations", conversationRoutes);
 app.use("/chat", chatRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`✅ Backend Express corriendo en puerto ${PORT}`);
-});
+export default app;

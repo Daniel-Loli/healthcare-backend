@@ -2,11 +2,11 @@
   "name": "healthcare-backend",
   "version": "1.0.0",
   "description": "Backend de negocio para HealthCare Assistant",
-  "main": "src/index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "node src/index.js",
-    "init-db": "node init-db.js"
+    "start": "node server.js",
+    "dev": "node src/index.js"
   },
   "dependencies": {
     "axios": "^1.7.7",
